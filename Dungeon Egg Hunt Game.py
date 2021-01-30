@@ -60,7 +60,12 @@ class DungeonGame:
         coordinate = P
         while coordinate != M and coordinate != B:
             co()
-            print(coordinate)
+            print(*self.rooms[0:5], sep = "||") 
+            print(*self.rooms[5:10], sep = "||") 
+            print(*self.rooms[10:15], sep = "||") 
+            print(*self.rooms[15:20], sep = "||") 
+            print(*self.rooms[20:25], sep = "||") 
+            print(f'\nYour current coordinate is: {coordinate}')
             if self.rooms.index(coordinate) == 0:
                 print('\nYou cannot move Up or Left')
                 movement = input('\nYou have two directions to move in: Down/Right'
@@ -176,6 +181,7 @@ class DungeonGame:
         elif coordinate == B:
             co()
             print('\nYou have found the basket, without being caught. Please proceed to finding the eggs.')
+            continue_game = input('Enter any letter to continue the game:    ')
             return coordinate
         
     def get_eggs(self,P,M,E1,E2,E3):
@@ -186,7 +192,12 @@ class DungeonGame:
         while counter != 3:
             while coordinate != M:
                 co()
-                print(coordinate)
+                print(*self.rooms[0:5], sep = "||") 
+                print(*self.rooms[5:10], sep = "||") 
+                print(*self.rooms[10:15], sep = "||") 
+                print(*self.rooms[15:20], sep = "||") 
+                print(*self.rooms[20:25], sep = "||")
+                print(f'\nYour current coordinate is: {coordinate}')
                 if self.rooms.index(coordinate) == 0:
                     print('\nYou cannot move Up or Left')
                     movement = input('\nYou have two directions to move in: Down/Right'
@@ -309,6 +320,7 @@ class DungeonGame:
                     co()
                     print('\nCongratulations you have found all three eggs.' 
                           '\nThe final step is to find the escape door without being caught.')
+                    continue_game = input('Enter any letter to continue the game:    ')
                     return coordinate
                 break
 
@@ -322,7 +334,12 @@ class DungeonGame:
         coordinate = P
         while coordinate != M and coordinate != D:
             co()
-            print(coordinate)
+            print(*self.rooms[0:5], sep = "||") 
+            print(*self.rooms[5:10], sep = "||") 
+            print(*self.rooms[10:15], sep = "||") 
+            print(*self.rooms[15:20], sep = "||") 
+            print(*self.rooms[20:25], sep = "||")
+            print(f'\nYour current coordinate is: {coordinate}')
             if self.rooms.index(coordinate) == 0:
                 print('\nYou cannot move Up or Left')
                 movement = input('\nYou have two directions to move in: Down/Right'
@@ -498,4 +515,5 @@ def runGame():
     
     print('\nThank you for playing. Have a nice day!')
       
-runGame()        
+    
+runGame()
